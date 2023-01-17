@@ -4,8 +4,12 @@ const allFish = getFish()
 for (const fish of allFish) {
     console.log(fish)
 }
-
-
+/*
+for(const fish of allFish) {
+    for (location of fish.location)
+    console.log (location)
+}
+*/
 
 // Import the FishList function from the correct module
 import {FishList} from './FishList.js'
@@ -22,3 +26,20 @@ let parentHTMLElement = document.querySelector("#fishHi")
 
 
 parentHTMLElement.innerHTML = FishList()
+
+
+
+import { mostHolyFish } from './fish.js'
+import { soldierFish } from './fish.js'
+import { nonHolyFish } from './fish.js'
+let holyFish = mostHolyFish()
+let soldier = soldierFish()
+let restOfTheFish = nonHolyFish()
+console.log(holyFish)
+console.log(soldier)
+console.log(restOfTheFish)
+
+
+import {locationList } from './locations.js'
+let HTMLElement = document.querySelector("#locations")
+HTMLElement.innerHTML = locationList()
